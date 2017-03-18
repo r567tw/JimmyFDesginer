@@ -4,26 +4,27 @@
 	<div class="col-md-8">
 		
 		<?php while ( have_posts() ) : the_post(); ?>
+		<!--判斷是不是有特色圖片，有則顯示無則不動作-->
+		<?php if (has_post_thumbnail()){?>
+			<img class="img-responsive" src="<?php bloginfo('template_url')?>/timthumb.php?src=<?php echo get_feature_image()?>&w=500&h=125&zc=1"/>
+		<?php }; ?>
 			<div class="panel panel-default">
-			<div class="panel-body">
-					<!--判斷是不是有特色圖片，有則顯示無則不動作-->
-					<?php if (has_post_thumbnail()){?>
-					<img class="img-responsive" src="<?php
-					bloginfo('template_url')?>/timthumb.php?src=<?php echo 
-					get_feature_image()?>&w=500&h=125&zc=1"/>
-					<?php }; ?>
+				<div class="panel panel-heading">
 					<h1><strong><?php the_title(); ?></strong></h1>
-				
-					<span class="label label-default hidden-print"><span class="glyphicon glyphicon-time">&nbsp<?php the_time('Y-m-d');?></span></span>&nbsp
-					<span class="label label-default hidden-print"><span class="glyphicon glyphicon-user"></span>&nbsp<span><?php the_author(); ?></span></span>&nbsp
-			</div>
+				</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-12">
+						<span class="label label-default hidden-print"><span class="glyphicon glyphicon-time"><?php the_time('Y-m-d');?></span></span>
+						<!--<span class="label label-default hidden-print"><span class="glyphicon glyphicon-user"></span><span><?php the_author(); ?></span></span>-->
+					</div>
+				</div>
 				<div class="panel-body">
 					<?php the_content(); ?>
+					<div class="panel-footer hidden-print">
+						<?php the_tags('<label>標籤:</lavel> &nbsp','&nbsp&nbsp&nbsp','');?>
+					</div>
 				</div>
-				<div class="clearfix"></div>
-			<div class="panel-footer hidden-print">
-				<?php the_tags('<label>標籤:</lavel> &nbsp','&nbsp&nbsp&nbsp','');?>
-			</div>
 			</div>
 			<!--存放相關文章-->
 			<div class="panel hidden-print">
@@ -51,7 +52,7 @@
 		<?php endwhile; ?>
 	</div>
 	<div class="col-md-4 hidden-xs hidden-sm hidden-print">
-	<?php get_sidebar(); ?>
+		<?php get_sidebar(); ?>
 	</div>
 </div>
 <?php get_footer(); ?>
