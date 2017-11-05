@@ -27,7 +27,9 @@ header{
   padding-top: 20px;
 }
 
-
+div.panel-heading > h1 > a {
+  word-break: break-all !important;
+}
 
 #gotop {
     display: none;
