@@ -1,9 +1,8 @@
 <?php 
-require_once('wp_bootstrap_navwalker.php');
 
 register_nav_menus(
 	array(
-		'primary-menu' => __( '頁首主選單','THEMENAME' ),
+		'primary-menu' => __('主選單'),
 		'footer-menu'=>__('頁尾選單','THEMENAME')
 	)
 );

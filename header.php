@@ -41,11 +41,8 @@
 		    			<div class="collapse navbar-collapse" id="myNavbar">
 		     				<?php
 					           wp_nav_menu( array(
-								    'menu'       => 'primary',
-								    'depth'      => 2,
-								    'container'  => false,
-								    'menu_class' => 'nav navbar-nav',
-								    'walker'     => new wp_bootstrap_navwalker()
+								    'theme-location'=> 'primary-menu',
+								    'menu_class' => 'nav navbar-nav'
 								    )
 								);
 					           date_default_timezone_set("Asia/Taipei");
