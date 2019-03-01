@@ -64,7 +64,7 @@ gulp.task('clean',function(){
         .pipe($.clean())
 });
 
-gulp.task('cleantmp',['vendorJs','vendorCSS','vendorFONT','scss','img'],function(){
+gulp.task('cleantmp',['vendorJs','vendorCSS','vendorFONT','scss'],function(){
     return gulp.src(['./.tmp'],{read:false})
         .pipe($.clean())
 });
