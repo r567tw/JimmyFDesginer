@@ -6,3 +6,4 @@ fonts/*
 js/all.js
 style.css
 images/*
+.DS_Store

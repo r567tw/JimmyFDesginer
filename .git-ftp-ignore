@@ -1,0 +1,12 @@
+node_modules/*
+bower_components/*
+scss/*
+img/*
+js/custom.js
+bower.json
+.gitignore
+CHANGELOG.md
+gulpfile.js
+package.json
+package-lock.json
+README.md
