@@ -13,7 +13,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="<?php bloginfo('template_directory')?>/img/favicon.ico" type="image/x-icon" />		
-		<link href="<?php bloginfo('template_directory') ?>/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 		<link href="<?php bloginfo('template_directory') ?>/style.css" media="screen" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
@@ -21,7 +20,7 @@
 		<?php if(!empty(get_option('header_image'))): ?>
 			<div class="jumbotron" style="background-image:url(<?=get_option('header_image');?>);">
 		<?php else: ?>
-			<div class="jumbotron" style="background-image:url(<?=get_template_directory()?>'/img/header.jpg');">
+			<div class="jumbotron" style="background-image:url(<?=get_template_directory()?>'/images/header.jpg');">
 		<?php endif ?>
 		<div class="container">
 			<div class="col-md-4">

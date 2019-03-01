@@ -1,0 +1,35 @@
+{
+    "name": "jimmyfdesiginer",
+    "description": "",
+    "main": "index.js",
+    "authors": [
+      "r567tw <r567tw@gmail.com>"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/r567tw/JimmyFDesginer",
+    "private": true,
+    "ignore": [
+      "**/.*",
+      "node_modules",
+      "bower_components",
+      "test",
+      "tests"
+    ],
+    "dependencies": {
+      "bootstrap": "3.3.6",
+      "font-awesome": "fontawesome#^4.7.0",
+      "jquery": "2.2.4"
+    },
+    "overrides": {
+      "bootstrap": {
+        "main":["dist/css/bootstrap.css","dist/js/bootstrap.js"]
+      },
+      "font-awesome": {
+        "main":["css/font-awesome.css","fonts/fontawesome-webfont.*"]
+      },
+      "jquery": {
+        "main":"dist/jquery.js"
+      }
+    }
+  }
+  

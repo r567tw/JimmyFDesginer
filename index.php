@@ -8,7 +8,7 @@
 					<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 				</div>
 				<div class="panel-body">
-					<span class="label label-default"><span class="glyphicon glyphicon-time"><?php the_time('Y-m-d');?></span></span>
+					<span class="label label-default"><i class="fa fa-clock-o"></i> <?php the_time('Y-m-d');?></span></span>
 					<!--<span class="label label-default"><span class="glyphicon glyphicon-user"></span>&nbsp<span><?php the_author(); ?></span></span>&nbsp-->
 				</div>
 				<div class="panel-body">	

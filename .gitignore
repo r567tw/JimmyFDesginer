@@ -1,1 +1,8 @@
 cache/*
+package-lock.json
+node_modules/*
+bower_components/*
+fonts/*
+js/all.js
+style.css
+images/*

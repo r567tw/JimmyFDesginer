@@ -260,7 +260,7 @@ add_filter('excerpt_more', 'new_excerpt_more');
 	        	 ?>
 	        	<div class="col-md-3 col-sm-3 col-xs-3">
 	        	<a href="<?php the_permalink(); ?>" rel="nofollow"  rel="bookmark" title="閱讀：<?php the_title_attribute(); ?>">
-	        	<img class="img-thumbnail img-responsive hidden-xs" src="<?php bloginfo('template_directory') ?>/img/relationship/<?=$img?>.jpg" width="100" height="100" alt="relationship"/><br/>
+	        	<img class="img-thumbnail img-responsive hidden-xs" src="<?php bloginfo('template_directory') ?>/imgages/relationship/<?=$img?>.jpg" width="100" height="100" alt="relationship"/><br/>
 	           <?php the_title(); ?> </a>
 	            </div>
 	        <?php endwhile;?>
@@ -316,7 +316,7 @@ add_filter('excerpt_more', 'new_excerpt_more');
 			'priority' => 120,
 		));
 		$wp_customize->add_setting('header_image', array(
-			'default'		 =>'img/header.jpg',
+			'default'		 =>'imgages/header.jpg',
 			'capability'     => 'edit_theme_options',
 			'type'           => 'option',
 		));

@@ -16,7 +16,7 @@
 					<div class="row">
 						<div class="col-md-12">
 						<p>
-							<span class="label label-default hidden-print"><span class="glyphicon glyphicon-time"><?php the_time('Y-m-d');?></span></span>
+							<span class="label label-default hidden-print"><span class="fa fa-clock-o"> <?php the_time('Y-m-d');?></span></span>
 							<!--<span class="label label-default hidden-print"><span class="glyphicon glyphicon-user"></span><span><?php the_author(); ?></span></span>-->
 						</p>
 						</div>
