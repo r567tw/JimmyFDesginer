@@ -4,7 +4,7 @@ Theme URI: http://theme.r567tw.tw;
 Description: FangJRdesigner Theme, just a theme
 Author: Jimmy Fang
 Author URI: http://r567tw.tw;
-Version: 1.0.0-beta
+Version: 0.0.1-beta
 Tags: white, two-column
 */
 html {
@@ -94,14 +94,12 @@ div.panel-heading > h1 > a {
   margin-bottom: 0px;
   background:center center no-repeat;
   background-size:cover;
-  background-image: url('img/header.jpg');
-  color:#ffffff;
  }
 
 .jumbotron a{
   color:#ffffff;
   text-decoration:none
- }
+}
 
 .affix {
       top: 0;

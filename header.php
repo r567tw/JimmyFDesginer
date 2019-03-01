@@ -18,11 +18,20 @@
 	</head>
 	<body>
 	<header class="hidden-print">
-		<div class="jumbotron">
+		<?php if(!empty(get_option('header_image'))): ?>
+			<div class="jumbotron" style="background-image:url(<?=get_option('header_image');?>);">
+		<?php else: ?>
+			<div class="jumbotron" style="background-image:url(<?=get_template_directory()?>'/img/header.jpg');">
+		<?php endif ?>
 		<div class="container">
 			<div class="col-md-4">
-				<h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-				<ins><?php bloginfo('description'); ?></ins>
+			<?php if(!empty(get_option('title_text_color'))): ?>
+				<h1><a style="color:<?=get_option('title_text_color')?>" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+				<ins style="color:<?=get_option('title_text_color')?>"><?php bloginfo('description'); ?></ins>
+			<?php else: ?>
+				<h1><a style="color:#fff" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+				<ins style="color:#fff"><?php bloginfo('description'); ?></ins>
+			<?php endif ?>
 			</div>
 		</div>
 		</div>

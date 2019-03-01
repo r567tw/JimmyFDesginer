@@ -7,8 +7,6 @@ register_nav_menus(
 	)
 );
 
-
-
 function wp_pagenavi() {
 	global $wp_query;
 	$max = $wp_query->max_num_pages;
@@ -196,21 +194,6 @@ function insert_fb_in_head() {
 }
 add_action( 'wp_head', 'insert_fb_in_head', 10 );
 
-//彩色標籤雲
-function colorCloud($text) {
-        $text = preg_replace_callback('|<a (.+?)>|i', 'colorCloudCallback', $text);
-        return $text;
-}
-
-
-function colorCloudCallback($matches) {
-        $text = $matches[1];
-        $color = dechex(rand(0,16777215));
-        $pattern = '/style=(\'|\")(.*)(\'|\")/i';
-        $text = preg_replace($pattern, "style=\"color:#{$color};$2\"", $text);
-        return "<a $text>";
-}
-add_filter('wp_tag_cloud', 'colorCloud', 1);
 
 //移除不必要的meta
 remove_action( 'wp_head', 'wp_generator' ) ; 
@@ -241,14 +224,6 @@ function stop_guessing($url) {
 }
 
 
-//自訂後台logo
-function custom_login_logo() {
-  echo '<style type="text/css">
-      .login h1 a {background-image:url('.get_bloginfo('template_directory').'/img/logo.png);}
-    </style>';  
-}
-add_action('login_head', 'custom_login_logo');
-
 //顯示摘要文
 function my_excerpt_length($length) {
 return 200;
@@ -265,7 +240,7 @@ return '… <a href="'. get_permalink($post->ID) . '">繼續閱讀</a>';
 add_filter('excerpt_more', 'new_excerpt_more');
 
 //增加相關文章功能
-function get_similar_post($post_id){
+	function get_similar_post($post_id){
 	   $tags = wp_get_post_tags($post_id);
 	   if ($tags) {
 	      $first_tag = $tags[0]->term_id;
@@ -334,7 +309,45 @@ function get_similar_post($post_id){
 	}
 	/*歷史的這一天結束*/
 
+	function header_customize_image($wp_customize){
+		$wp_customize->add_section('JimmyFDesinger_header_image', array(
+			'title'    => __('header_image', 'JimmyFDesinger'),
+			'description' => '頁首圖片',
+			'priority' => 120,
+		));
+		$wp_customize->add_setting('header_image', array(
+			'default'		 =>'img/header.jpg',
+			'capability'     => 'edit_theme_options',
+			'type'           => 'option',
+		));
+	 
+		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'header_image', array(
+			'label'    => __('上傳圖片', 'JimmyFDesinger'),
+			'section'  => 'JimmyFDesinger_header_image',
+			'settings' => 'header_image',
+		)));
+	}
+	add_action('customize_register','header_customize_image');
 
+	function header_customize_TitleColor($wp_customize){
+		$wp_customize->add_section('JimmyFDesinger_title_color', array(
+			'title'    => __('title_text_color', 'JimmyFDesinger'),
+			'description' => '標題顏色',
+			'priority' => 120,
+		));
+		$wp_customize->add_setting('title_text_color', array(
+			'default'		 => '#FFF',
+			'capability'     => 'edit_theme_options',
+			'type'           => 'option',
+		));
+	 
+		$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'title_text_color', array(
+			'label'    => __('Title Color', 'JimmyFDesinger'),
+			'section'  => 'JimmyFDesinger_title_color',
+			'settings' => 'title_text_color',
+		)));
+	}
+	add_action('customize_register','header_customize_TitleColor');
 
 
 ?>
