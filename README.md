@@ -7,3 +7,6 @@ Wordpress 佈景主題，白色，兩欄
 2. npm install
 3. gulp
 
+## For Me help to deploy theme
+- git ftp push -s [scope]
+
