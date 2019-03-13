@@ -10,3 +10,6 @@
 ## 0.1.1-beta 2019.03.02
 1. 加入gulp 作為開發
 2. glyphicon 改為 fontawesome
+
+## 0.1.1-beta 2019.03.14
+1. fix 有admin bar 會影響theme 呈現的問題

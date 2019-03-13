@@ -34,8 +34,16 @@
 			</div>
 		</div>
 		</div>
-
-		<nav class="navbar navbar-default nav"  data-spy="affix" data-offset-top="192">
+		<?php if(is_admin_bar_showing()): ?>
+			<style>
+			 .affix{
+				padding-top:32px;
+			 }
+			</style>
+			<nav class="navbar navbar-default nav"  data-spy="affix" data-offset-top="224">
+		<?php else: ?>
+			<nav class="navbar navbar-default nav"  data-spy="affix" data-offset-top="192">
+		<?php endif; ?>
 	  				<div class="container">
 	  				<a class="navbar-brand visible-xs visible-sm" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
 	    				<div class="navbar-header">
@@ -93,5 +101,4 @@
 				</div>
 				<?php }?>
 	<div class="container">
-	<?php //echo date("Y")."/".date("m")."/".date("d"); ?>
 
