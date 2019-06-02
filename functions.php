@@ -114,9 +114,7 @@ function article_author(){
 			<p><?php the_author_meta('description');?></p>
 		</div>
 		<div class="row text-right hidden-sm hidden-xs hidden-print">
-				<?php if ( get_the_author_meta( 'google' ) ): ?>
-					<a href="<?php the_author_meta('google');?>?rel=author" title="我的 Google+">Google+</a>
-				<?php endif; if ( get_the_author_meta( 'facebook' ) ): ?>
+				<?php if ( get_the_author_meta( 'facebook' ) ): ?>
 					 | <a href="<?php the_author_meta('facebook');?>" title="我的 Facebook">Facebook</a>
 				<?php endif; if ( get_the_author_meta( 'github' ) ): ?>
 					 | <a href="<?php the_author_meta('github');?>" title="<?php the_author();?> Github">Github</a>
