@@ -93,7 +93,6 @@ function breadcrumb_init(){
 }
 
 function add_user_porfile( $contactmethods ) {
-	$contactmethods['google'] = 'Google+ 個人網址';
 	$contactmethods['facebook'] = 'Facebook 個人網址';
 	$contactmethods['description_url'] = '個人介紹頁';
 	$contactmethods['github']='Github';
