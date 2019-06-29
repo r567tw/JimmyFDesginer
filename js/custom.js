@@ -22,7 +22,8 @@ $(function(){
         	}
     });
 
-    
+	hljs.initHighlightingOnLoad();
+	CodeLine.initOnPageLoad()
 
 
 

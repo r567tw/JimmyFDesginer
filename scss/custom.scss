@@ -95,7 +95,7 @@ html {
   .affix {
         top: 0;
         width: 100%;
-        z-index: 1;
+        z-index: 2;
   }
   
   .comment{
@@ -121,6 +121,25 @@ html {
     z-index: max;
   }
   
-  
+  //fix codeline style problem
+  pre.cljs .cljs-wrapper.cljs-ten .cljs-number{
+    z-index: 0;
+  }
+
+  pre {
+    overflow: scroll !important;
+  }
+
+  div.panel-heading > h1 {
+    word-break: break-all !important;
+  }
+
+  .panel-footer label {
+
+  }
+
+  .panel-footer > label > a {
+    display: inline-block !important;
+  }
   
   
