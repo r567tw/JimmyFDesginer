@@ -8,5 +8,5 @@
 </footer>
 <?php wp_footer(); ?>
 </body>
-	<script type="text/javascript" src="<?php bloginfo('template_directory') ?>/js/all.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory') ?>/src/all.js"></script>
 </html>

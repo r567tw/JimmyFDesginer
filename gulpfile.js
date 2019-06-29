@@ -31,14 +31,14 @@ gulp.task('vendorJs',['bower'],function(){
             drop_console:true //把console.log 削掉
         }
     }))                               
-    .pipe(gulp.dest('./js'))
+    .pipe(gulp.dest('./src'))
 });
 
 gulp.task('vendorCSS',['bower'],function(){    
-    return gulp.src(['./.tmp/css/theme.css','./.tmp/vendors/**/*.css','./.tmp/css/style.css'])
-    .pipe($.concat('style.css'))
+    return gulp.src(['./.tmp/vendors/**/*.css','./.tmp/css/custom.css'])
+    .pipe($.concat('./src/theme.css'))
     .pipe(minifyCSS())                            
-    .pipe(gulp.dest('./.tmp'))
+    .pipe(gulp.dest('./'))
 });
 
 gulp.task('ChangeFontUrl',['vendorCSS'],function(){

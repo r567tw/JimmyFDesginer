@@ -1,5 +1,11 @@
 # JimmyFDesginer
-Wordpress 佈景主題，白色，兩欄
+
+Wordpress Theme
+
+- white
+- two clumn
+- only support one-level menu
+
 > 網址說明：https://r567tw.tw/jimmyfdesigner/
 
 ## For developer

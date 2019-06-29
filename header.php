@@ -13,7 +13,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="<?php bloginfo('template_directory')?>/img/favicon.ico" type="image/x-icon" />		
-		<link href="<?php bloginfo('template_directory') ?>/style.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="<?php bloginfo('template_directory') ?>/src/theme.css" media="screen" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
 	<header class="hidden-print">
