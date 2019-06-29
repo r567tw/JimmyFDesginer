@@ -1,10 +1,11 @@
-html {
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+  html {
     position: relative;
     min-height: 100%;
   }
+
   body {
-    /* Margin bottom by footer height */
-    margin-bottom: 100px;
+    font-family: 'Lato','Noto Sans TC','PingFang TC',"SF Pro TC",'Helvetica Neue','Helvetica','arial','Microsoft JhengHei',sans-serif;
   }
   
   header{
