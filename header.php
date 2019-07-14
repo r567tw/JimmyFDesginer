@@ -28,7 +28,7 @@
 				<div class="jumbotron" style="background-image:url(<?= get_template_directory() ?>'/images/header.jpg');">
 				<?php endif ?>
 				<div class="container">
-					<div class="col-md-4">
+					<div class="col-md-12">
 						<?php if (!empty(get_option('title_text_color'))) : ?>
 							<h1><a style="color:<?= get_option('title_text_color') ?>" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
 							<ins style="color:<?= get_option('title_text_color') ?>"><?php bloginfo('description'); ?></ins>
