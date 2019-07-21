@@ -6,7 +6,7 @@ Wordpress Theme
 - two clumn
 - only support one-level menu
 
-> 網址說明：https://r567tw.tw/jimmyfdesigner/
+> 網址說明：https://tech.r567tw.tw/jimmyfdesigner/
 
 ## For developer
 1. bower install
