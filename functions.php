@@ -93,7 +93,6 @@ function breadcrumb_init(){
 }
 
 function add_user_porfile( $contactmethods ) {
-	$contactmethods['facebook'] = 'Facebook 個人網址';
 	$contactmethods['description_url'] = '個人介紹頁';
 	$contactmethods['github']='Github';
 	return $contactmethods;
@@ -113,9 +112,7 @@ function article_author(){
 			<p><?php the_author_meta('description');?></p>
 		</div>
 		<div class="row text-right hidden-sm hidden-xs hidden-print">
-				<?php if ( get_the_author_meta( 'facebook' ) ): ?>
-					 | <a href="<?php the_author_meta('facebook');?>" title="我的 Facebook">Facebook</a>
-				<?php endif; if ( get_the_author_meta( 'github' ) ): ?>
+				<?php if ( get_the_author_meta( 'github' ) ): ?>
 					 | <a href="<?php the_author_meta('github');?>" title="<?php the_author();?> Github">Github</a>
 				<?php endif; if ( get_the_author_meta( 'description_url' ) ): ?>
 					 | <a href="<?php the_author_meta('description_url');?>" title="<?php the_author();?> 個人介紹">個人介紹</a>
@@ -203,13 +200,6 @@ add_filter( 'pre_comment_content', 'wp_specialchars' );
 //隱藏其他 WordPress Feeds 網址
 remove_action( 'wp_head', 'feed_links', 2 ); 
 remove_action( 'wp_head', 'feed_links_extra', 3 );
-
-//隱藏wordpress登入錯誤消息
-function no_errors_please(){
- return '登入錯誤';
-}
-add_filter( 'login_errors', 'no_errors_please' );
-
 
 //停止 WordPress 猜測網址功能
 add_filter('redirect_canonical', 'stop_guessing');
