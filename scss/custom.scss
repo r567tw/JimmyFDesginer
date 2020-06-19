@@ -1,147 +1,143 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-  html {
-    position: relative;
-    min-height: 100%;
-  }
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+html {
+  position: relative;
+  min-height: 100%;
+}
 
-  body {
-    font-family: 'Lato','Noto Sans TC','PingFang TC',"SF Pro TC",'Helvetica Neue','Helvetica','arial','Microsoft JhengHei',sans-serif;
-    margin-bottom: 100px;
-  }
-  
-  header{
-    padding-bottom: 20px;
-  }
-  .avatar {
-      border-radius: 50%;
-  }
-  
-  #searchform{
-    padding-top: 20px;
-  }
-  
-  div.panel-heading > h1 > a {
-    word-break: break-all !important;
-  }
-  
-  #gotop {
-      display: none;
-      position: fixed;
-      right: 20px;
-      bottom: 20px;    
-      padding: 10px 15px;    
-      font-size: 20px;
-      background: #777;
-      color: white;
-      cursor: pointer;
-      z-index:1;
-  }
-  
-  
-  .feature_image{
-      position:relative;
-      left:100px;
-      bottom:-10px;
-      margin:0px auto;
-      padding:20px 0px 0px 0px;
-  }
-  
-  /* PageNavi */
-  .wp-pagenavi {
-      margin: 30px;
-      padding: 20px;
-      background: #FFF;
-    size:100%;
-      text-align:center;
-  }
-  
-  .page-numbers {
-      padding: 5px 10px;
-      color: #FFF;
-      background: #888;
-      text-decoration: none;
-  }
-  .page-numbers:hover {
-      color: #FFF;
-      background: #666;
-  }
-  .page-numbers.current {
-      color: #FFF;
-      background: #666;
-  }
-  
-  
-  .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: #f5f5f5;
-    text-align: center;
-  }
-  
-  .nav{
-    padding-top: 0px;
-  }
-  
-  .jumbotron{
-    margin-bottom: 0px;
-    background:center center no-repeat;
-    background-size:cover;
-   }
-  
-  .jumbotron a{
-    color:#ffffff;
-    text-decoration:none
-  }
-  
-  .affix {
-        top: 0;
-        width: 100%;
-        z-index: 2;
-  }
-  
-  .comment{
-    margin-top: 30px;
-  }
-  
-  .comment .submit {
-    margin-top: 10px;
-    color: #333;
-    background-color: #fff;
-    border-color: #ccc;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
-    text-decoration: none;
-  }
-  
-  .submit:hover {
-    background: #ccc;
-  }
-  
-  .history{
-    margin-top: 10px;
-    z-index: max;
-  }
-  
-  //fix codeline style problem
-  pre.cljs .cljs-wrapper.cljs-ten .cljs-number{
-    z-index: 0;
-  }
+body {
+  font-family: "Lato", "Noto Sans TC", "PingFang TC", "SF Pro TC",
+    "Helvetica Neue", "Helvetica", "arial", "Microsoft JhengHei", sans-serif;
+  margin-bottom: 100px;
+}
 
-  pre {
-    overflow: scroll !important;
-  }
+header {
+  padding-bottom: 20px;
+}
+.avatar {
+  border-radius: 50%;
+}
 
-  div.panel-heading > h1 {
-    word-break: break-all !important;
-  }
+#searchform {
+  padding-top: 20px;
+}
 
-  .panel-footer label {
+div.panel-heading > h1 > a {
+  word-break: break-all !important;
+}
 
-  }
+#gotop {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 10px 15px;
+  font-size: 20px;
+  background: #777;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+}
 
-  .panel-footer > label > a {
-    display: inline-block !important;
-  }
-  
-  
+.feature_image {
+  position: relative;
+  left: 100px;
+  bottom: -10px;
+  margin: 0px auto;
+  padding: 20px 0px 0px 0px;
+}
+
+/* PageNavi */
+.wp-pagenavi {
+  margin: 30px;
+  padding: 20px;
+  background: #fff;
+  size: 100%;
+  text-align: center;
+}
+
+.page-numbers {
+  padding: 5px 10px;
+  color: #fff;
+  background: #888;
+  text-decoration: none;
+}
+.page-numbers:hover {
+  color: #fff;
+  background: #666;
+}
+.page-numbers.current {
+  color: #fff;
+  background: #666;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.nav {
+  padding-top: 0px;
+}
+
+.jumbotron {
+  margin-bottom: 0px;
+  background: center center no-repeat;
+  background-size: cover;
+}
+
+.jumbotron a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.affix {
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.comment {
+  margin-top: 30px;
+}
+
+.comment .submit {
+  margin-top: 10px;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.submit:hover {
+  background: #ccc;
+}
+
+.history {
+  margin-top: 10px;
+  z-index: max;
+}
+
+//fix codeline style problem
+pre.cljs .cljs-wrapper.cljs-ten .cljs-number {
+  z-index: 0;
+}
+
+pre {
+  overflow: scroll !important;
+}
+
+div.panel-heading > h1 {
+  word-break: break-all !important;
+}
+
+.panel-footer label {
+}
+
+.panel-footer > label > a {
+  display: inline-block !important;
+}
